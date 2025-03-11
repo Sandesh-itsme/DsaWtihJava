@@ -75,6 +75,30 @@ public class QuestionsOnBinarySearch_5 {
         }
         return ans;
     }
+    public static int ans(int[] arr,int element){
+        int start=0;
+        int end=1;
+        while(element>arr[end]){
+            int temp=end+1; // new start which is end+1
+            // end = previous end + size of the box * 2  ie. (end-start+1)*2
+             end=end+(end-start+1)*2;
+             start=temp;
+        }
+        return binarySearch(arr,element,start,end);
+    }
+    public static int binarySearch(int[] arr,int element,int start,int end){
+        while(start<=end){
+        int mid=(start+end)/2;
+        if(arr[mid]<element){
+            start=mid+1;
+        }else if(arr[mid]>element){
+            end=mid-1;
+        }else{
+            return mid;
+        }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // 1. Ceiling number
@@ -89,9 +113,13 @@ public class QuestionsOnBinarySearch_5 {
       //  char element='a';
       //  System.out.println(greaterElement(arr1,element));
         // 4. Find the first and last position of a given number in an array
+       // System.out.println("Enter the element : ");
+       // int element=sc.nextInt();
+       // System.out.println(Arrays.toString(findNumber(arr,element)));
+           // 5. Position of an  element in an infinite sorted array
         System.out.println("Enter the element : ");
         int element=sc.nextInt();
-        System.out.println(Arrays.toString(findNumber(arr,element)));
+        System.out.println(ans(arr,element));
 
 
 
