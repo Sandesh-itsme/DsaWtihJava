@@ -99,7 +99,7 @@ public class QuestionsOnBinarySearch_5 {
         }
         return -1;
     }
-    public static int PeakElement(int[] arr){
+    public static int peakElement(int[] arr){
         int start=0;
         int end=arr.length-1;
         while(start!=end){
@@ -116,6 +116,39 @@ public class QuestionsOnBinarySearch_5 {
         // since start and end both holds the possible answer at that time and start==end
         // at last so they are the answer.we can return any of them
         return start; // we can return end also
+    }
+    public static int ElementInMountainArray(int[] arr,int element){
+       int peak=peakElement(arr);
+       int firstTry=orderAgnosticBinarySearch(arr,element,0,peak);
+       if(firstTry!=-1){
+           return firstTry;
+       }else{
+           return orderAgnosticBinarySearch(arr,element,peak+1,arr.length-1);
+       }
+    }
+    public static int orderAgnosticBinarySearch(int[] arr,int item,int start,int end){
+        boolean isAscending=arr[start]<arr[end];
+            while(start<=end) {
+                int m = (start + end) / 2;
+                if (arr[m] == item) {
+                    return m;
+                }
+                if (isAscending) {
+                    if (arr[m] > item) {
+                        end = m - 1;
+                    } else if (arr[m] < item) {
+                        start = m + 1;
+                    }
+                }
+             else{
+                if (arr[m] > item) {
+                    start = m + 1;
+                } else if (arr[m] < item) {
+                    end = m - 1;
+                }
+            }
+        }
+        return -1;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -140,7 +173,11 @@ public class QuestionsOnBinarySearch_5 {
       //  System.out.println(ans(arr,element));
         // 6. Peak element in mountain array
         int[] arr1={1,2,3,4,3,2,1};
-        System.out.println(PeakElement(arr1));
+      //  System.out.println(peakElement(arr1));
+        // 7. Find element in mountain array
+        System.out.println("Enter the element : ");
+        int element=sc.nextInt();
+        System.out.println(ElementInMountainArray(arr1,element));
 
 
 
