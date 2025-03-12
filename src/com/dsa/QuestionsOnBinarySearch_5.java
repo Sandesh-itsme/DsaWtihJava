@@ -99,6 +99,24 @@ public class QuestionsOnBinarySearch_5 {
         }
         return -1;
     }
+    public static int PeakElement(int[] arr){
+        int start=0;
+        int end=arr.length-1;
+        while(start!=end){
+            int mid=(start+end)/2;
+            if(arr[mid]<arr[mid+1]){
+                // we are in increasing order of an array
+                start=mid+1;
+            }else if(arr[mid]>arr[mid+1]){
+                // we are in decreasing part of an array
+                // here mid maybe thw answer so we will do end=mid not mid-1
+                end=mid;
+            }
+        }
+        // since start and end both holds the possible answer at that time and start==end
+        // at last so they are the answer.we can return any of them
+        return start; // we can return end also
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // 1. Ceiling number
@@ -117,9 +135,12 @@ public class QuestionsOnBinarySearch_5 {
        // int element=sc.nextInt();
        // System.out.println(Arrays.toString(findNumber(arr,element)));
            // 5. Position of an  element in an infinite sorted array
-        System.out.println("Enter the element : ");
-        int element=sc.nextInt();
-        System.out.println(ans(arr,element));
+      //  System.out.println("Enter the element : ");
+      //  int element=sc.nextInt();
+      //  System.out.println(ans(arr,element));
+        // 6. Peak element in mountain array
+        int[] arr1={1,2,3,4,3,2,1};
+        System.out.println(PeakElement(arr1));
 
 
 
