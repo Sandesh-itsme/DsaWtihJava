@@ -150,6 +150,43 @@ public class QuestionsOnBinarySearch_5 {
         }
         return -1;
     }
+    public static int findPivot(int[] arr){
+        int start=0;
+        int end=arr.length-1;
+        while(start<=end){
+            int mid=(start+end)/2;
+            // case 1:
+            if(mid<end && arr[mid]>arr[mid+1]){
+                return mid;
+            }
+            // case 2
+            if(mid<end && arr[mid]<arr[mid-1]){
+                return mid-1;
+            }
+            // case 3
+            if(arr[mid]<start){
+                end=mid-1;
+            }else{
+                // case 4
+                start=mid+1;
+            }
+        }
+        return -1;
+    }
+    public static int searchElement(int[] arr,int element){
+        int pivot=findPivot(arr);
+        if(pivot==-1){
+            // array is not rotated so apply normal binary search
+            return binarySearch(arr,element,0,arr.length-1);
+        }
+        if(arr[pivot]==element){
+            return pivot;
+        }
+        if(element>=arr[0]){
+            return binarySearch(arr,element,0,pivot-1);
+        }
+            return binarySearch(arr,element,pivot+1,arr.length-1);
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // 1. Ceiling number
@@ -172,12 +209,18 @@ public class QuestionsOnBinarySearch_5 {
       //  int element=sc.nextInt();
       //  System.out.println(ans(arr,element));
         // 6. Peak element in mountain array
-        int[] arr1={1,2,3,4,3,2,1};
+    //    int[] arr1={1,2,3,4,3,2,1};
       //  System.out.println(peakElement(arr1));
         // 7. Find element in mountain array
+     //   System.out.println("Enter the element : ");
+     //   int element=sc.nextInt();
+     //   System.out.println(ElementInMountainArray(arr1,element));
+        // 8. Search an element in a sorted rotated array
+        int[]  arr1={5,6,7,1,2,3};
         System.out.println("Enter the element : ");
         int element=sc.nextInt();
-        System.out.println(ElementInMountainArray(arr1,element));
+        System.out.println(searchElement(arr1,element));
+
 
 
 
