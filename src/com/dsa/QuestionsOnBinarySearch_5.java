@@ -187,6 +187,13 @@ public class QuestionsOnBinarySearch_5 {
         }
             return binarySearch(arr,element,pivot+1,arr.length-1);
     }
+    public static int numberOfRotation(int[] arr){
+        int pivot=findPivot(arr);
+        // find the position of pivot before rotation
+        int position=arr.length-1;
+        int requiredPosition=position-pivot;
+        return requiredPosition;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // 1. Ceiling number
@@ -217,9 +224,12 @@ public class QuestionsOnBinarySearch_5 {
      //   System.out.println(ElementInMountainArray(arr1,element));
         // 8. Search an element in a sorted rotated array
         int[]  arr1={5,6,7,1,2,3};
-        System.out.println("Enter the element : ");
-        int element=sc.nextInt();
-        System.out.println(searchElement(arr1,element));
+       // System.out.println("Enter the element : ");
+       // int element=sc.nextInt();
+      //  System.out.println(searchElement(arr1,element));
+        // 9. Count number of rotation in an array
+        System.out.println(numberOfRotation(arr1));
+
 
 
 
