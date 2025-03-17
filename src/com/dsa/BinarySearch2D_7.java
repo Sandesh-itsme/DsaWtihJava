@@ -44,7 +44,7 @@ public class BinarySearch2D_7 {
 
         // Search until there remains only two row
         while(rStart<(rEnd-1)){
-            int mid=rStart-(rEnd-rStart)/2;
+            int mid=rStart+(rEnd-rStart)/2;
             if(arr[mid][cMid]==target){
                 return new int[]{mid,cMid};
             }else if(arr[cMid][mid]<target){
