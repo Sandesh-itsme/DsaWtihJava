@@ -81,6 +81,25 @@ public class BinarySearch2D_7 {
             return binarySearch(arr,rStart+1,cMid+1,cols-1,target);
         }
     }
+    public static int[] search2D(int[][] arr,int target){
+        int n=arr.length;  // row no.
+        int m=arr[0].length;  // column no.
+        int start=0;
+        int end=n*m-1;  // n*m-1 for n*m matrix.we suppose it is 3*4 matrix
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            int row=mid/m;
+            int col=mid%m;
+            if(arr[row][col]==target){
+                return new int[]{row,col};
+            }else if(arr[row][col]<target){
+                start=mid+1;
+            }else{
+                end=mid-1;
+            }
+        }
+        return new int[]{-1,-1};
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         // 1. When an array is sorted row wise and column wise
@@ -93,14 +112,19 @@ public class BinarySearch2D_7 {
    //     int target=sc.nextInt();
    //     System.out.println(Arrays.toString(search(arr,target)));
         int[][] arr1={
-                {1,2,3},
-                {4,5,6},
-                {7,8,9,10}
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,16,17}
         };
         // 2. When an array is sorted
+      //  System.out.println("Enter the target : ");
+      //  int target=sc.nextInt();
+      //  System.out.println(Arrays.toString(searchIn2DArray(arr1,target)));
+        // Above approach is not correct so this below one works well
         System.out.println("Enter the target : ");
         int target=sc.nextInt();
-        System.out.println(Arrays.toString(searchIn2DArray(arr1,target)));
+        System.out.println(Arrays.toString(search2D(arr1,target)));
+
 
 
 
