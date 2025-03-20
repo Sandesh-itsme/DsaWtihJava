@@ -1,6 +1,7 @@
 package com.dsa;
 
-public class selection {public static int maxNum(int[] arr, int first, int last) {
+public class selection {
+    public static int maxNum(int[] arr, int first, int last) {
     int max = first;  // Start by assuming the first element is the max
     for (int i = first + 1; i <= last; i++) {
         if (arr[i] > arr[max]) {  // Compare values, not indices
