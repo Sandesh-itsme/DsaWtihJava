@@ -106,7 +106,24 @@ public class CyclicSortQuestionFixed_11 {
         ans[1]=-1;
         return ans;
     }
-
+    public static int positiveMissingNumber(int[] arr){
+        int i = 0;
+        while (i < arr.length) {
+            int correct = arr[i]-1;
+            if (arr[i]>0 && arr[i]<=arr.length && arr[i] != arr[correct]) {
+                swap(arr, i, correct);
+            } else {
+                i++;
+            }
+        }
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != j+1) {
+                return j+1;
+            }
+        }
+     //case 2:if the array is sorted from 1 to n then n+1 will be the smallest positive missing number
+        return arr.length+1;
+    }
 
 public static void main(String[] args) {
         int[] arr = {1,2,2,4};
@@ -117,7 +134,8 @@ public static void main(String[] args) {
         // System.out.println(disappearedNumber(arr));
       //  System.out.println(CyclicSortQuestionFixed_11.duplicateNumber(arr));
       //     System.out.println(allDuplicateNumber(arr));
-          System.out.println(Arrays.toString(setOfMissingNumber(arr)));
+       //   System.out.println(Arrays.toString(setOfMissingNumber(arr)));
+    System.out.println(positiveMissingNumber(arr));
     }
 }
 
