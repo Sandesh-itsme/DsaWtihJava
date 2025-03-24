@@ -3,6 +3,17 @@ package com.dsa;
 import java.util.ArrayList;
 
 public class StringAndStringbuilder_12 {
+    public static boolean palindrome(String word){
+        char[] arr=word.toCharArray();
+        for(int i=0;i<word.length()/2;i++){
+            char start=arr[i];
+            char end=arr[word.length()-1-i];
+            if(start!=end){
+                return false;
+            }
+        }
+        return true;
+    }
     public static void main(String[] args) {
         String name="hello";
         // Creating different string class
@@ -40,6 +51,26 @@ public class StringAndStringbuilder_12 {
 //            series=series+text;
 //        }
 //        System.out.println(series);
+
+//        // String builder
+//        StringBuilder builder=new StringBuilder();
+//        for(int i=0;i<26;i++){
+//            char text=(char)('a'+i);
+//            builder.append(text);
+//        }
+//        System.out.println(builder);
+//
+//        // String methods
+//        String word="abcdef";
+//        System.out.println(word.indexOf('a'));
+//        System.out.println(word.toLowerCase());
+//        System.out.println(word.toUpperCase());
+//        System.out.println(word.toCharArray());
+
+        // String palindrome
+        String word="abcba";
+        System.out.println(palindrome(word));
+
 
 
 
