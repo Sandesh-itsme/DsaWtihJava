@@ -33,6 +33,15 @@ public class Pattern_13 {
             System.out.println();
         }
     }
+    public static void pattern5(int n){
+        for(int row=1;row<=2*n;row++){
+            int totalCol=row>n? 2*n-row : row;
+            for(int col=1;col<=totalCol;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -44,8 +53,10 @@ public class Pattern_13 {
       //  pattern3(4);
 
         // 4.
-        pattern4(4);
+       // pattern4(4);
 
+        // 5.
+        pattern5(4);
 
     }
 }
