@@ -71,7 +71,7 @@ public class Pattern_13 {
         // 5.
        // pattern5(4);
 
-        // Remaining question from 5 needs to be done
+        // Remaining question from 5 needs to be done here
 
         // 28.
         pattern28(4);
