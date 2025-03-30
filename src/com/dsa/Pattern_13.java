@@ -55,6 +55,23 @@ public class Pattern_13 {
             System.out.println();
         }
     }
+    public static void pattern30(int n){
+        for(int row=1;row<=n;row++){
+            // for printing space
+            for(int space=0;space<n-row;space++){
+                System.out.print("  ");
+            }
+             // for printing first half upto 1
+            for(int col=row;col>=1;col--){
+                System.out.print(col+" ");
+            }
+            // for printing second half from 2
+            for(int col=2;col<=row;col++){
+                System.out.print(col+" ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -74,7 +91,11 @@ public class Pattern_13 {
         // Remaining question from 5 needs to be done here
 
         // 28.
-        pattern28(4);
+       // pattern28(4);
+
+        // 29.
+        pattern30(4);
+
 
 
     }
