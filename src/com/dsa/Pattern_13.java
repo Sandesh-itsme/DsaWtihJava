@@ -72,6 +72,21 @@ public class Pattern_13 {
             System.out.println();
         }
     }
+    public static void pattern17(int n){
+        for(int row=1;row<=n;row++){
+             int totalCol=row>n?2*n-row:row;
+             for(int space=1;space<=n-row;space++){
+                 System.out.print(" ");
+             }
+             for(int col=totalCol;col>=1;col--){
+                 System.out.print(col);
+             }
+             for(int col=2;col<=totalCol;col++){
+                 System.out.print(col);
+             }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -88,13 +103,16 @@ public class Pattern_13 {
         // 5.
        // pattern5(4);
 
+        // 17.
+        pattern17(4);
+
         // Remaining question from 5 needs to be done here
 
         // 28.
        // pattern28(4);
 
         // 29.
-        pattern30(4);
+       // pattern30(4);
 
 
 
