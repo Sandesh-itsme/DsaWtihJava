@@ -87,6 +87,17 @@ public class Pattern_13 {
             System.out.println();
         }
     }
+    public static void pattern31(int n){
+        int originalN=n;
+        n=2*n;
+        for(int row=0;row<=n;row++){
+            for(int col=0;col<=n;col++){
+                int atEveryIndex=originalN-Math.min(Math.min(row,col),Math.min(n-row,n-col));
+                System.out.print(atEveryIndex+" ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -104,7 +115,7 @@ public class Pattern_13 {
        // pattern5(4);
 
         // 17.
-        pattern17(4);
+     //   pattern17(4);
 
         // Remaining question from 5 needs to be done here
 
@@ -113,6 +124,9 @@ public class Pattern_13 {
 
         // 29.
        // pattern30(4);
+
+        // 31.
+        pattern31(4);
 
 
 
