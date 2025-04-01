@@ -98,6 +98,50 @@ public class Pattern_13 {
             System.out.println();
         }
     }
+    public static void pattern8(int n){
+         for(int row=0;row<=n;row++){
+             for(int space=0;space<n-row;space++){
+                 System.out.print(" ");
+             }
+             for(int col=0;col<1+2*row;col++){
+                 System.out.print("*");
+             }
+             System.out.println();
+         }
+    }
+    public static void pattern10(int n){
+        for(int row=0;row<n;row++){
+            for(int space=0;space<n-row;space++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern12(int n){
+        for(int row=0;row<=n;row++){
+            for(int space=0;space<row;space++){
+                System.out.print(" ");
+            }
+
+            for(int col=0;col<=n-row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(int row=0;row<=n;row++){
+            for(int space=0;space<n-row;space++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -114,19 +158,28 @@ public class Pattern_13 {
         // 5.
        // pattern5(4);
 
+        // 8.
+          //    pattern8(4);
+
+        // 10.
+       // pattern10(4);
+
+        // 12. solved but not using appropriate way
+       // pattern12(4);
+
         // 17.
-     //   pattern17(4);
+       // pattern17(4);
 
         // Remaining question from 5 needs to be done here
 
         // 28.
        // pattern28(4);
 
-        // 29.
-       // pattern30(4);
+        // 30.
+      //  pattern30(4);
 
         // 31.
-        pattern31(4);
+     //   pattern31(4);
 
 
 
