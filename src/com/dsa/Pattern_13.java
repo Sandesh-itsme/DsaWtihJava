@@ -142,6 +142,17 @@ public class Pattern_13 {
         }
 
     }
+    public static void pattern13(int n){
+        for(int row=0;row<n;row++){
+            for(int space=0;space<n-row;space++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<=row;col++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args) {
         // 1.
      //  pattern1(4);
@@ -166,6 +177,9 @@ public class Pattern_13 {
 
         // 12. solved but not using appropriate way
        // pattern12(4);
+
+        // 13.
+        pattern13(4);
 
         // 17.
        // pattern17(4);
