@@ -10,7 +10,11 @@ public class Recursion_14 {
         System.out.println(n);
         numbers(n+1);
     }
-    public static int fibonacci(int n){
+    public static int fibonacci(int n) {
+        // if(n<2){
+      //  return n;
+  //  }
+        // we can use this instead of the two comparison for n==0 and n==1
         if(n==0){
             return 0;
         }else if(n==1){
