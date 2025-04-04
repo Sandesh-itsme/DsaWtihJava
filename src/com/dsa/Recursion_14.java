@@ -23,6 +23,8 @@ public class Recursion_14 {
             return fibonacci(n-1)+fibonacci(n-2);
     }
     public static int binarySearch(int[] arr,int target,int start,int end){
+        // we are providing start and end in the argument because they are required for sub function
+        //  calls
         if(start>end){
             // element is not found
             return -1;
@@ -46,5 +48,6 @@ public class Recursion_14 {
               int[] arr={1,2,3,4,5,6};
               int target=3;
         System.out.println(binarySearch(arr,target,0,arr.length-1));
+
     }
 }
