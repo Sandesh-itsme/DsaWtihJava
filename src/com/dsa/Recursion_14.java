@@ -48,7 +48,7 @@ public class Recursion_14 {
       //      System.out.print(fibonacci(i)+" ");
       //  }
 
-        // binary search using recursion
+          // binary search using recursion
               int[] arr={1,2,3,4,5,6};
               int target=3;
               System.out.println(binarySearch(arr,target,0,arr.length-1));
