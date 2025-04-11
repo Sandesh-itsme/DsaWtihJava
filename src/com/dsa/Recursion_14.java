@@ -40,7 +40,7 @@ public class Recursion_14 {
         return binarySearch(arr,target,start,mid-1);
     }
     public static void main(String[] args) {
-        // recursive function to print numbers from 1 to 5
+       // recursive function to print numbers from 1 to 5
       //  numbers(1);
 
         // fibonacci series using recursion
@@ -48,7 +48,7 @@ public class Recursion_14 {
       //      System.out.print(fibonacci(i)+" ");
       //  }
 
-          // binary search using recursion
+          //   binary search using recursion
               int[] arr={1,2,3,4,5,6};
               int target=3;
               System.out.println(binarySearch(arr,target,0,arr.length-1));
