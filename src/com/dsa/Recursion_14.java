@@ -43,12 +43,12 @@ public class Recursion_14 {
       //  recursive function to print numbers from 1 to 5
       //  numbers(1);
 
-      // fibonacci series using recursion
+      //  fibonacci series using recursion
       //  for(int i=0;i<=5;i++){
       //      System.out.print(fibonacci(i)+" ");
-      //  }
+      //   }
 
-          //  binary search using recursion
+      //      binary search using recursion
               int[] arr={1,2,3,4,5,6};
               int target=3;
               System.out.println(binarySearch(arr,target,0,arr.length-1));
