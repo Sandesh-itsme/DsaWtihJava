@@ -39,6 +39,9 @@ public class Recursion_14 {
         }
         return binarySearch(arr,target,start,mid-1);
     }
+    public static int fibonacciWithFormula(int n){
+        return (int)(Math.pow(((1+Math.sqrt(5))/2),n)/(Math.sqrt(5)));
+    }
     public static void main(String[] args) {
       //  recursive function to print numbers from 1 to 5
       //  numbers(1);
@@ -49,9 +52,12 @@ public class Recursion_14 {
       //   }
 
       //      binary search using recursion
-              int[] arr={1,2,3,4,5,6};
-              int target=3;
-              System.out.println(binarySearch(arr,target,0,arr.length-1));
+      //        int[] arr={1,2,3,4,5,6};
+      //        int target=3;
+      //        System.out.println(binarySearch(arr,target,0,arr.length-1));
+
+        // recursion using formula
+        System.out.println(fibonacciWithFormula(4));
 
     }
 }
