@@ -19,5 +19,15 @@ public class BitwiseQuestions_16 {
         // 2. Number with single repetition in an array
         int[] arr={1,2,3,4,3,2,1};
         System.out.println(singleRepetition(arr));
+
+        // 3. Single no. in an array
+
+        // 4. Position of ith bit
+
+        // 5. Set the ith bit to 1
+
+        // 6.  Reset the ith bit to 0
+
+
     }
 }
