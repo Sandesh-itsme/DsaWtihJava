@@ -32,11 +32,10 @@ public class BitwiseQuestions_16 {
      //   System.out.println(singleInAnArray(arr1));
 
         // 4. Position of ith bit
-//        int num=1001101;
-//        int position=3;
-//        int ans=num&(1<<(position-1));
-//        System.out.println(ans);
-//        System.out.println(1<<(position-1));
+        int num= 0b1001001;
+        int position=3;
+        int ans=num&(1<<(position-1));
+        System.out.println((ans != 0) ? 1 : 0);
 
         // 5. Set the ith bit to 1
 
