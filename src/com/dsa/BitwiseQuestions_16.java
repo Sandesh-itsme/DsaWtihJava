@@ -43,6 +43,17 @@ public class BitwiseQuestions_16 {
         }
         return sum;
     }
+    public static int optimumMagicalNumber(int n){
+        int base=5;
+        int ans=0;
+        while(n>0){
+            int lastDigit=n&1;
+             n=n>>1;
+            ans=ans+base*lastDigit;
+            base=base*5;
+        }
+        return ans;
+    }
     public static void main(String[] args) {
         // 1. Odd or even
      //   int n=6;
@@ -70,7 +81,8 @@ public class BitwiseQuestions_16 {
 
         // 7. Magical number
        // System.out.println(binary(6));
-        System.out.println(magicalNumber(6));
+       // System.out.println(magicalNumber(6));
+        System.out.println(optimumMagicalNumber(6));
 
     }
 }
