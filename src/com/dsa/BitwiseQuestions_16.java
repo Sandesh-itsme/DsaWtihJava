@@ -35,7 +35,7 @@ public class BitwiseQuestions_16 {
         int num= 0b1001001;
         int position=3;
         int ans=num&(1<<(position-1));
-        System.out.println((ans != 0) ? 1 : 0);
+        System.out.println((ans != 0) ? 1 : 0);  // It prints 1 or 0 otherwise decimal ma print hunxa
 
         // 5. Set the ith bit to 1
 
