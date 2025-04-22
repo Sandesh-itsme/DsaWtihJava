@@ -18,6 +18,31 @@ public class BitwiseQuestions_16 {
         }
         return sum;
     }
+    public static int binary(int n){
+        int sum=0;
+        int i=1;
+        int r;
+        while(n>0){
+            r=n%2;
+            sum=sum+r*i;
+            i=i*10;
+            n=n/2;
+        }
+        return sum;
+    }
+    public static double magicalNumber(int n){
+        int num=binary(n);
+        double sum=0;
+        int r;
+        int i=1;
+        while(num>0){
+            r=num%10;
+            sum=sum+(r*Math.pow(5,i));
+            num=num/10;
+            i++;
+        }
+        return sum;
+    }
     public static void main(String[] args) {
         // 1. Odd or even
      //   int n=6;
@@ -32,16 +57,20 @@ public class BitwiseQuestions_16 {
      //   System.out.println(singleInAnArray(arr1));
 
         // 4. Position of ith bit
-        int num= 0b1001001;
-        int position=3;
-        int ans=num&(1<<(position-1));
-        System.out.println((ans != 0) ? 1 : 0);  // It prints 1 or 0 otherwise decimal ma print hunxa
+     //   int num= 0b1001001;
+     //   int position=3;
+     //   int ans=num&(1<<(position-1));
+     //   System.out.println((ans != 0) ? 1 : 0);  // It prints 1 or 0 otherwise decimal ma print hunxa
 
         // 5. Set the ith bit to 1
 
 
         // 6.  Reset the ith bit to 0
 
+
+        // 7. Magical number
+       // System.out.println(binary(6));
+        System.out.println(magicalNumber(6));
 
     }
 }
