@@ -54,6 +54,15 @@ public class BitwiseQuestions_16 {
         }
         return ans;
     }
+    public static int noOfDigits(int n,int b){
+        int ans=(int)(Math.log(n)/Math.log(b))+1;
+        return ans;
+    }
+    public static int sumOfPascalsTriangle(int n){
+        // n=row number
+        int ans=1<<(n-1);   // ---> 1*2^(n-1)
+        return ans;
+    }
     public static void main(String[] args) {
         // 1. Odd or even
      //   int n=6;
@@ -82,7 +91,16 @@ public class BitwiseQuestions_16 {
         // 7. Magical number
        // System.out.println(binary(6));
        // System.out.println(magicalNumber(6));
-        System.out.println(optimumMagicalNumber(6));
+     //   System.out.println(optimumMagicalNumber(6));
+
+        // 8. No. of digits in given base
+      //  int base=2;
+      //  int num=10;
+      //  System.out.println(noOfDigits(num,base));
+
+        // 9. Sum of nth row of pascals triangle
+        int n=3;
+        System.out.println(sumOfPascalsTriangle(n));
 
     }
 }
