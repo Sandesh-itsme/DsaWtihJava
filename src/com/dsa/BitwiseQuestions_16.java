@@ -63,6 +63,11 @@ public class BitwiseQuestions_16 {
         int ans=1<<(n-1);   // ---> 1*2^(n-1)
         return ans;
     }
+    public static boolean powerOfTwo(int n){
+        boolean ans;
+       ans = (n&(n-1))==0;
+       return ans;
+    }
     public static void main(String[] args) {
         // 1. Odd or even
      //   int n=6;
@@ -99,8 +104,12 @@ public class BitwiseQuestions_16 {
       //  System.out.println(noOfDigits(num,base));
 
         // 9. Sum of nth row of pascals triangle
-        int n=3;
-        System.out.println(sumOfPascalsTriangle(n));
+      //  int n=3;
+      //  System.out.println(sumOfPascalsTriangle(n));
+
+        // 10. Power of 2 or not
+        int n=8;
+        System.out.println(powerOfTwo(n));
 
     }
 }
