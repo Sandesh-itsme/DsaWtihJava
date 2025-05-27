@@ -1,5 +1,7 @@
 package com.dsa;
 
+import java.util.Arrays;
+
 public class BitwiseQuestions_16 {
     public static boolean isOdd(int n){
         return (n&1)==1;
@@ -68,6 +70,56 @@ public class BitwiseQuestions_16 {
        ans = (n&(n-1))==0;
        return ans;
     }
+    public static int setBits(int n){
+        // approach 1
+        int count=0;
+        while(n>0){
+            if((n&1)==1){
+                count++;
+            }
+            n=n>>1;
+        }
+        return count;
+
+        // approach 2
+//        int count=0;
+//        while(n>0){
+//            count++;
+//            n=n&(n-1);  //  n=n-(n&-n);
+//        }
+//        return count;
+    }
+    public static int xorFrom0ToA(int a){
+        if(a%4==0){
+            return a;
+        }
+        if(a%4==1){
+            return 1;
+        }
+        if(a%4==2){
+            return a+1;
+        }
+        if(a%4==3){
+            return 0;
+        }
+        return -1;
+    }
+    public static int xorFromAToB(int a,int b){
+        int xorB=xorFrom0ToA(b);
+        int xorA=xorFrom0ToA(a);
+        return xorA^xorB;
+    }
+    public static int[][] flippingImage(int [][]arr){
+        for(int[] row:arr){
+            // reversing each row
+            for(int i=0;i<(arr[0].length+1)/2;i++){
+                int temp=row[i]^1;
+                row[i]=row[arr[0].length-i-1]^1;
+                row[arr[0].length-i-1]=temp;
+            }
+        }
+        return arr;
+    }
     public static void main(String[] args) {
         // 1. Odd or even
      //   int n=6;
@@ -108,8 +160,34 @@ public class BitwiseQuestions_16 {
       //  System.out.println(sumOfPascalsTriangle(n));
 
         // 10. Power of 2 or not
-        int n=8;
-        System.out.println(powerOfTwo(n));
+     //   int n=8;
+     //   System.out.println(powerOfTwo(n));
+
+        // 11. No. of set bits in given number
+      //  int n=0b1010;       // for binary representation
+      //  System.out.println(setBits(n));
+
+        // 12. Xor from 0 to a
+      //  int a=6;
+      //  System.out.println(xorFrom0ToA(a));
+
+        // 13. Xor from a to b
+      //  int a=3;
+     //   int b=9;
+     //   System.out.println(xorFromAToB(a,b));
+
+        // 14. Flipping an image
+        int [][]arr={{1,0,0},
+                      {1,1,0},
+                       {0,1,0}};
+        System.out.println(Arrays.toString(flippingImage(arr)));
+
+
+
+
+
+
+
 
     }
 }
