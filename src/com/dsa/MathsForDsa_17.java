@@ -56,6 +56,18 @@ public class MathsForDsa_17 {
          }
         return result;
     }
+    public static double newtonRaphson(double n){
+        double x=n;  // taking n as initial guess
+        double root;
+        while(true){
+            root=0.5*(x+(n/x));
+            if(Math.abs(root-x)<=1){
+                break;
+            }
+            x=root;
+        }
+        return root;
+    }
     public static void main(String[] args) {
         // 1. Prime number
      //   int n=2;
@@ -68,7 +80,10 @@ public class MathsForDsa_17 {
 
         // 3. Square root of a number
         // printing up to 3 decimal places
-        System.out.printf("%.3f",squareRoot(40));
+      //  System.out.printf("%.3f",squareRoot(40));
+
+        // 4. Newton raphson method
+        System.out.println(newtonRaphson(40));
 
 
 
