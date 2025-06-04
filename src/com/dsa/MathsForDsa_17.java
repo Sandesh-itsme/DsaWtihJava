@@ -1,5 +1,7 @@
 package com.dsa;
 
+import java.util.ArrayList;
+
 public class MathsForDsa_17 {
     public static boolean isPrime(int n){
         if(n==1){
@@ -69,10 +71,28 @@ public class MathsForDsa_17 {
         return root;
     }
     public static void factors(int n){
+        ArrayList list=new ArrayList<>();
+        // Approach 1 :
         for(int i=1;i<=n;i++){
             if(n%i==0){
                 System.out.print(i+" ");
             }
+        }
+        System.out.println();
+
+        // Approach 2 :
+        for(int i=1;i*i<=n;i++){
+            if(n%i==0){
+                if(n%i==i){
+                    // Handling duplicate cases like for 36 it will print 6 twice
+                    System.out.println(i+" ");
+                }
+                System.out.print(i+" ");
+                list.add(n/i);
+            }
+        }
+        for(int i=list.size()-1;i>=0;i--){
+            System.out.print(list.get(i)+" ");
         }
     }
     public static void main(String[] args) {
