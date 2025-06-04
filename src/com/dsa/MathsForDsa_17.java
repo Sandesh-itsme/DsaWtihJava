@@ -68,6 +68,13 @@ public class MathsForDsa_17 {
         }
         return root;
     }
+    public static void factors(int n){
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                System.out.print(i+" ");
+            }
+        }
+    }
     public static void main(String[] args) {
         // 1. Prime number
      //   int n=2;
@@ -83,8 +90,10 @@ public class MathsForDsa_17 {
       //  System.out.printf("%.3f",squareRoot(40));
 
         // 4. Newton raphson method
-        System.out.println(newtonRaphson(40));
+       // System.out.println(newtonRaphson(40));
 
+        // 5. Factors of a number
+               factors(20);
 
 
 
