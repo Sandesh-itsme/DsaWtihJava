@@ -95,6 +95,12 @@ public class MathsForDsa_17 {
             System.out.print(list.get(i)+" ");
         }
     }
+    public static int gcd(int a,int b){
+        if(a==0){
+            return b;
+        }
+          return gcd(b%a,a);
+    }
     public static void main(String[] args) {
         // 1. Prime number
      //   int n=2;
@@ -113,7 +119,10 @@ public class MathsForDsa_17 {
        // System.out.println(newtonRaphson(40));
 
         // 5. Factors of a number
-               factors(20);
+        //       factors(20);
+
+        // 6. GCD of a number
+        System.out.println(gcd(2,4));
 
 
 
