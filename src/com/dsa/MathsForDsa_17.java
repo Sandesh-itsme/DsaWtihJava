@@ -101,6 +101,11 @@ public class MathsForDsa_17 {
         }
           return gcd(b%a,a);
     }
+    public static int lcm(int a,int b){
+        int hcf=gcd(a,b);
+        int lcm=(a*b)/hcf;
+        return lcm;
+    }
     public static void main(String[] args) {
         // 1. Prime number
      //   int n=2;
@@ -122,7 +127,10 @@ public class MathsForDsa_17 {
         //       factors(20);
 
         // 6. GCD of a number
-        System.out.println(gcd(2,4));
+       // System.out.println(gcd(2,4));
+
+        // 7. LCM of a number
+        System.out.println(lcm(2,4));
 
 
 
