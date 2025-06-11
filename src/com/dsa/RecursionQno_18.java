@@ -77,7 +77,15 @@ public class RecursionQno_18 {
         sum=sum*10+rem;
         reverse(n/10);
     }
-
+    public static void palindrome(int n){
+        reverse(n);
+       // System.out.println(sum);
+        if(sum==n){
+            System.out.println("Number is palindrome.");
+        }else{
+            System.out.println("Number is not palindrome.");
+        }
+    }
     public static void main(String[] args) {
         // 1. Print n to 1
     //    nto1(5);
@@ -102,8 +110,11 @@ public class RecursionQno_18 {
         //     passingArgument(5);
 
         // 8. Reverse a number
-              reverse(1234);
-        System.out.println(sum);
+      //        reverse(1234);
+      //  System.out.println(sum);
+
+        // 9. Palindrome Number
+               palindrome(121);
 
     }
 }
