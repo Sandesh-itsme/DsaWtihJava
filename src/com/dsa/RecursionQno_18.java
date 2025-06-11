@@ -86,6 +86,46 @@ public class RecursionQno_18 {
             System.out.println("Number is not palindrome.");
         }
     }
+    static int count=0;
+    public static int noOfZero(int n){
+        // Using iteration
+//        int count=0;
+//        int z=0;
+//        while(n!=0){
+//            z=n%10;
+//            if(z==0){
+//                count++;
+//            }
+//             n=n/10;
+//        }
+//        return count;
+
+        // Using recursion
+           int z=0;
+           if(n==0){
+               return 1;
+           }
+           z=n%10;
+           if(z==0){
+               count++;
+           }
+           noOfZero(n/10);
+           return count;
+    }
+    public static int noOfSteps(int n){
+        return helper(n,0);
+    }
+    public static int helper(int n,int steps){
+        if(n==0){
+            return steps;
+        }
+        if(n%2==0){
+            return helper(n/2,steps+1);
+        }else{
+          return helper(n-1,steps+1);
+        }
+
+    }
     public static void main(String[] args) {
         // 1. Print n to 1
     //    nto1(5);
@@ -114,7 +154,13 @@ public class RecursionQno_18 {
       //  System.out.println(sum);
 
         // 9. Palindrome Number
-               palindrome(121);
+        //       palindrome(121);
+
+        // 10. Count total no. of zero
+        //        System.out.println(noOfZero(1001));
+
+        // 11. Count no. of steps
+               System.out.println(noOfSteps(2));
 
     }
 }
