@@ -45,6 +45,28 @@ public class RecursionArray_19 {
            list.addAll(ansFromBelow);
            return list;
       }
+      public static int rotatedBinarySearch(int[] arr,int target,int start,int end){
+        if(start>end){
+            return -1;
+        }
+          int mid=(start+end)/2;
+          if(arr[mid]==target){
+              return mid;
+          }
+         // when target lies in first half
+            if(arr[start]<=arr[mid]){
+                if (target>=arr[start] && target<=arr[mid]){
+                     return rotatedBinarySearch(arr,target,start,mid-1);
+                }else{
+                    return rotatedBinarySearch(arr,target,mid+1,end);
+                }
+            }
+               if(target>=arr[mid]&&target<=arr[end]){
+                   return rotatedBinarySearch(arr,target,mid+1,end);
+               }else{
+                   return rotatedBinarySearch(arr,target,start,mid-1);
+               }
+      }
     public static void main(String[] args) {
         //  1. Array is sorted or not
         int[] arr={1,2,3,4,4,5,6,7};
@@ -58,7 +80,11 @@ public class RecursionArray_19 {
      //  System.out.println(returnList(arr,4,0,list));
 
         // 4. Returning an array list without passing array list as an argument
-        System.out.println(returnWithoutArgument(arr,4,0));
+      //  System.out.println(returnWithoutArgument(arr,4,0));
+
+        // 5. Rotated binary search
+        int[] arr1={5,6,7,8,4,1,2,3};
+        System.out.println(rotatedBinarySearch(arr1,6,0,7));
 
 
     }
