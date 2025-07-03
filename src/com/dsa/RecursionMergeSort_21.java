@@ -51,6 +51,9 @@ public class RecursionMergeSort_21 {
         arr=mergeSort(arr);
         System.out.println(Arrays.toString(arr));
 
+        // Merge sort in place : we don't create new object here
+
+
 
 
         
