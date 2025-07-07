@@ -34,8 +34,13 @@ public class RecursionQuickSort_22 {
     }
     public static void main(String[] args) {
       int[] arr={5,3,2,1,4,6,7};
-      mergeSort(arr,0,6);
+   //   mergeSort(arr,0,6);
+   //     System.out.println(Arrays.toString(arr));
+
+        // Internal sorting algorithm
+             Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
+
 
 
     }
