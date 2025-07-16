@@ -15,12 +15,26 @@ public class OOP1_WrapperClasses_25 {
 
           int n1=6;
           int n2=7;
-           swap(n1,n2);
-           System.out.println(n1+" "+n2);
+        //   swap(n1,n2);
+        //   System.out.println(n1+" "+n2);
 
+        // final keyword in java
+        final int c=6;
+       // c=7;          not allowed because we cannot reassign value to a final variable
 
+       final Show s1=new Show(6);
+        s1.id=7;
+        // this is allowed even s1 is final because this is non-primitive data type
+        // we can change the value of final variable for non-primitive data type
 
-
+      //  s1=new Show(16);  this is not allowed because we cannot reassign value to final variable
 
     }
 }
+       class Show{
+      int id;
+
+      public Show(int id){
+          this.id=id;
+      }
+       }
