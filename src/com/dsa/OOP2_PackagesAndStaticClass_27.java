@@ -17,6 +17,9 @@ public class OOP2_PackagesAndStaticClass_27 {
         System.out.println(Car_27.num+1);
         System.out.println(Car_27.num+1);
 
+        // This and super keyword cannot be used with static variables
+       // System.out.println(this.num);
+
      //   greet();  This is non-static method.So,it cannot be accessed from static method ie.main
         // We can create object of main to access non-static method
         OOP2_PackagesAndStaticClass_27 obj=new OOP2_PackagesAndStaticClass_27();
