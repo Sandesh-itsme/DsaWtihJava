@@ -1,6 +1,15 @@
 package com.dsa;
 
 public class OOP2_PackagesAndStaticClass_27 {
+      // Inner classes
+    static class show1{
+        // This class is inside another class.So,it can be static
+          public void hi(){
+              System.out.println("Hi");
+          }
+      }
+
+
     public static void main(String[] args) {
         Car_27 c1 =new Car_27(100000,"Honda");
         Car_27 c2 =new Car_27(200000,"Suzuki");
@@ -25,8 +34,17 @@ public class OOP2_PackagesAndStaticClass_27 {
         OOP2_PackagesAndStaticClass_27 obj=new OOP2_PackagesAndStaticClass_27();
         obj.greet();
 
+       // hello();  This is inside non-static class.So,this need object to be accessed
+        show1 s=new show1(); // Accessing static inner classes
+          s.hi();
     }
     public void greet(){
         System.out.println("I am non-static greet method.");
     }
 }
+  class show2{
+    // Since this class is outside of other class.So,this cannot be static
+      public void hello(){
+          System.out.println("Hello");
+      }
+  }
