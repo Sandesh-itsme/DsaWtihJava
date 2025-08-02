@@ -34,5 +34,11 @@ public class Car_27 {
         ShowStatic s2=new ShowStatic();
         System.out.println(s2.a+" "+s2.b);
 
+        // Accessing singleton class
+        // All  three objects points to same object instance
+              Singleton_27.Singleton o1= Singleton_27.Singleton.getInstance();
+        Singleton_27.Singleton o2= Singleton_27.Singleton.getInstance();
+        Singleton_27.Singleton o3= Singleton_27.Singleton.getInstance();
+
     }
 }
