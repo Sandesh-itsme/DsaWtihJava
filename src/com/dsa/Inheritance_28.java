@@ -27,6 +27,7 @@ public class Inheritance_28 {
           Yamaha(int price,String name,String color){
             super(price,name);  // This will call parent class constructor taking two arguments
             this.color=color;
+             //   super(price,name);  Super keyword must be initialised first
           }
 
     }
