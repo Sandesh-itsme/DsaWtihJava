@@ -7,11 +7,13 @@ public class MethodOverriding_29 {
         }
     }
     static class Ev extends Car2{
+        @Override
         void name(){
             System.out.println("I am name of class ev.");
         }
     }
     static class Manual extends Car2{
+        @Override
         void name(){
             System.out.println("I am name of class manual.");
         }
