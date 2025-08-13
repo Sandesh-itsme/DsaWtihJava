@@ -41,7 +41,7 @@ public class finalAndStaticOverriding_29 {
     void name(){
         System.out.println("I am name of class manual.");
     }
-    // Static method cannot be overridden
+    // Static method cannot be overridden but can be inherited
     //  @Override
     static void hello(){
         System.out.println("I am hello method of class Manual.");
