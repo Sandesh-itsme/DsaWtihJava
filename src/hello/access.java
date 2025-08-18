@@ -1,6 +1,5 @@
 package hello;
 
-import com.dsa.Show2;
 import com.dsa.accessModifier_30;
 
 public class access extends accessModifier_30{
