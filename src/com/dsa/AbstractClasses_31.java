@@ -10,6 +10,7 @@ public class AbstractClasses_31 {
         Nepal n=new Nepal("Nepal");
         n.name();
         n.normal();
+        System.out.println(n.num);
 
         // Accessing static method of abstract class with class name
         Country.print();
@@ -21,6 +22,7 @@ public class AbstractClasses_31 {
 }
 abstract class Country{
   String name;
+  final int num=10;
 
   public Country(String name){
       this.name=name;
