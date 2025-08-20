@@ -3,9 +3,8 @@ package com.dsa;
 public class AbstractClasses_31 {
 
     public static void main(String[] args) {
-        // We cannot create object of abstract class
+      // We cannot create object of abstract class
       //  Country c=new Country();
-
 
         Nepal n=new Nepal("Nepal");
         n.name();
@@ -17,7 +16,6 @@ public class AbstractClasses_31 {
 
         // Abstract class can be used as reference variable
            Country object=new Nepal("Nepal");
-
     }
 }
 abstract class Country{
@@ -27,6 +25,7 @@ abstract class Country{
   public Country(String name){
       this.name=name;
   }
+
   //  We cannot create abstract constructor
  // abstract Country();
 
