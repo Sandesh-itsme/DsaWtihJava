@@ -20,7 +20,14 @@ public class OOP1_24 {
     // Calling constructor using constructor
       Student(){
           // This is creating new reference variable like Student();
+
            this(2,"Shyam",91);
+          //        So what did this in default constructor help with?
+//                It provides default values.
+//                Think of it like this:
+//“If someone creates a Student without giving any info,
+//                I’ll automatically give them rollno = 2 and name = Ram.”
+
       }
 
     Student(int roll,String name,int marks){
