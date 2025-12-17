@@ -29,6 +29,9 @@ public class OOP1_24 {
           // This is creating new reference variable like Student();
 
            this(2,"Shyam",91);
+
+           // Here this is replaced with class variable like new Student(2,"Shyam",91);
+          //  but in other case like when accessing with reference variable it is replaced with object itself.
           //        So what did this in default constructor help with?
 //                It provides default values.
 //                Think of it like this:
