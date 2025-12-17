@@ -4,12 +4,17 @@ public class OOP1_24 {
     public static void main(String[] args) {
         // Classes in java
         Student s1=new Student(1,"Ram",90);
-        System.out.println(s1.roll);
-        System.out.println(s1.name);
-        System.out.println(s1.marks);
+//        System.out.println(s1.roll);
+//        System.out.println(s1.name);
+//        System.out.println(s1.marks);
 
         Student s2=new Student();
-        System.out.println(s2.roll);
+//        System.out.println(s2.roll);
+
+        Student s3=new Student(s1);
+        System.out.println(s3.name);
+        System.out.println(s3.roll);
+        System.out.println(s3.marks);
     }
 }
   class Student{
@@ -28,6 +33,13 @@ public class OOP1_24 {
 //“If someone creates a Student without giving any info,
 //                I’ll automatically give them rollno = 2 and name = Ram.”
 
+      }
+
+      // Passing another constructor in argument of constructor
+      Student(Student anotherConstructor){
+          this.roll=anotherConstructor.roll;
+          this.name=anotherConstructor.name;
+          this.marks=anotherConstructor.marks;
       }
 
     Student(int roll,String name,int marks){
