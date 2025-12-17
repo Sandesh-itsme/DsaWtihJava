@@ -22,7 +22,9 @@ public class OOP1_24 {
     String name;
     int marks;
 
-    // Calling constructor using constructor
+    // Calling constructor using constructor . Here Student is a empty constructor . Using this keyword we are
+    //  calling another constructor which takes 3 arguments
+
       Student(){
           // This is creating new reference variable like Student();
 
@@ -35,7 +37,7 @@ public class OOP1_24 {
 
       }
 
-      // Passing another constructor in argument of constructor
+      // Passing another object of same class in argument of constructor
       Student(Student anotherConstructor){
           this.roll=anotherConstructor.roll;
           this.name=anotherConstructor.name;
