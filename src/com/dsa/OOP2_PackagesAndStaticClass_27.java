@@ -47,4 +47,5 @@ public class OOP2_PackagesAndStaticClass_27 {
       public void hello(){
           System.out.println("Hello");
       }
+
   }
