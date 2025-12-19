@@ -30,7 +30,7 @@ public class Car_27 {
         s1.b=s1.b+3;
         System.out.println(s1.a+" "+s1.b);
 
-        // This object will also have same value as above
+        // This object will also have same value as above because static block are run only once.
         ShowStatic s2=new ShowStatic();
         System.out.println(s2.a+" "+s2.b);
 
