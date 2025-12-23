@@ -41,8 +41,11 @@ public class Inheritance_28 {
             Yamaha y1=new Yamaha("Red");
         System.out.println(y1.name+" "+y1.price+" "+y1.color);
 
+    //    Car c3=new Yamaha("Red");  This is allowed.But,it can access parent class property only because it is
+                                    // the type of reference variable which determines what properties can
+                                    // be accessed.
 
-
+      //  Yamaha y2=new Car();  This is not allowed.
 
 
     }
