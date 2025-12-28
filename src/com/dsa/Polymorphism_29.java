@@ -18,7 +18,7 @@ public class Polymorphism_29 {
       }
     public static void main(String[] args) {
         // This is the example of polymorphism where we have a method name which has same name in all
-        // classes but has different form
+        // classes but has different form.
         Car1 c=new Car1();
         Ev e=new Ev();
         Manual m=new Manual();
