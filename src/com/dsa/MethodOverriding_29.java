@@ -25,7 +25,7 @@ public class MethodOverriding_29 {
         c.name();
         // There must method name in both Car2 and Manual class.
         // But the method of Manual class will run because the object of which reference variable is created
-        // determines which method runs.
+        // Determines which method runs.
         // The reference variable determines which method can be accessed.
 
 
