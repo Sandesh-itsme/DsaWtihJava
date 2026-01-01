@@ -19,6 +19,7 @@ public class accessModifier_30 {
     public static void main(String[] args) {
         // Overriding different object class
 
+
     }
 }
 
