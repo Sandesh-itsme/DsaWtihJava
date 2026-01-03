@@ -34,7 +34,7 @@ public class objectClass_30 {
           if(obj1.equals(obj3)){
               System.out.println("Object 1 and Object 3 are equal.");
           }
-              // getClass method is used to get details about class
+              // getClass method is used to get details about class.
             System.out.println(obj1.getClass().getName());
 
 
