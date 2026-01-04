@@ -3,7 +3,7 @@ package com.dsa;
 public class AbstractClasses_31 {
 
     public static void main(String[] args) {
-      // We cannot create object of abstract class
+      // We cannot create object of abstract class.
       //  Country c=new Country();
 
         Nepal n=new Nepal("Nepal");
@@ -11,10 +11,10 @@ public class AbstractClasses_31 {
         n.normal();
         System.out.println(n.num);
 
-        // Accessing static method of abstract class with class name
+        // Accessing static method of abstract class with class name.
         Country.print();
 
-        // Abstract class can be used as reference variable
+        // Abstract class can be used as reference variable.
            Country object=new Nepal("Nepal");
     }
 }
