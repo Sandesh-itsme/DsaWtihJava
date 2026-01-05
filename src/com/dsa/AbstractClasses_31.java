@@ -26,10 +26,10 @@ abstract class Country{
       this.name=name;
   }
 
-  //  We cannot create abstract constructor
+  //  We cannot create abstract constructor.
  // abstract Country();
 
-   // We cannot create abstract static class
+   // We cannot create abstract static class.
   //  abstract static void hello();
 
   abstract void name();
