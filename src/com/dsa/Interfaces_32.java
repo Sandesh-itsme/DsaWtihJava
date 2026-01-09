@@ -6,13 +6,16 @@ public class Interfaces_32 {
     a1.loud();
     a1.name();
     a1.speed();
+    System.out.println(a1.a);
 
-    // It can implements two interfaces even both have same method because they don't have their body
+
+        // It can implements two interfaces even both have same method because they don't have their body
     // and class implementing them can have their own body.So,it doesn't matter which one it is overriding.
 
     }
 }
   interface sound{
+    int a=6;
     void loud();
     void name();
   }
