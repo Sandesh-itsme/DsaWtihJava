@@ -3,36 +3,72 @@ package com.dsa;
 public class MultipleClassesInterface_33 {
     public static void main(String[] args) {
 
+        mobile m1=new mobile();
+        m1.batteryPower();
+        m1.playMusic1();
+        m1.playVideo1();
+        m1.upgrade();
+        m1.batteryPower();
+
     }
 }
-  interface run{
-    void speed();
-    void distance();
+  interface mp3{
+    void playMusic();
+    void playVideo();
   }
-   interface typeOfAnimal{
-    void type();
-   }
-     interface upgradeAnimal{
-    void upgrade();
+     interface battery{
+    void batteryPower();
      }
-     class power implements run{
-    public void speed(){
-        System.out.println("It has medium speed.");
+
+
+     class mp3Player implements mp3{
+    @Override
+    public void playMusic(){
+        System.out.println("Playing music.");
     }
       @Override
-      public void distance(){
-          System.out.println("It can run upto medium distance.");
+      public void playVideo(){
+          System.out.println("Playing video.");
       }
      }
-       class types implements typeOfAnimal{
+
+
+       class electrical implements battery{
     @Override
-    public void type(){
-        System.out.println("It is domestic animal.");
+    public void batteryPower(){
+        System.out.println("Electrical battery.");
     }
        }
-         class upgrades implements upgradeAnimal{
+
+
+         class solar implements battery{
     @Override
-    public void upgrade(){
-                 System.out.println("");
+    public void batteryPower(){
+                 System.out.println("Solar battery.");
              }
          }
+
+   class mobile{
+    private battery b1;
+    private mp3 m1=new mp3Player();
+
+    public mobile(){
+         b1=new electrical();
+    }
+      public mobile(battery b1){
+        this.b1=b1;
+      }
+        public void batteryPower(){
+        b1.batteryPower();
+        }
+        public void playMusic1(){
+        m1.playMusic();
+        }
+          public void playVideo1(){
+        m1.playVideo();
+          }
+
+          public void upgrade(){
+        this.b1=new solar();
+       }
+   }
