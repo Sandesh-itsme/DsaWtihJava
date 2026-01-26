@@ -8,12 +8,12 @@ public class Generics_36 {
         c1.add(7);
         c1.add(8);
 
-        System.out.println(c1.getSize());
-        System.out.println(c1.getValue(0));
+        System.out.println("The size of array is : "+c1.getSize());
+        System.out.println("The value at index 0 is : "+c1.getValue(0));
+        System.out.println("The value at index 1 is : "+c1.getValue(1));
         c1.setValue(1,8);
-        System.out.println(c1.getValue(1));
+        System.out.println("The value at index 1 after changing  is : "+c1.getValue(1));
         System.out.println(c1.remove(2));
-        System.out.println(c1.getValue(2));
     }
 }
 
@@ -38,7 +38,9 @@ public class Generics_36 {
         private void resize(){
         int []temp=new int[data.length*2];
         // Copying data from data to temp.
-        for(int i=0;i<=temp.length;i++){
+        // We compare i with data.length not with temp.length because temp is double than the size of
+        // data.
+        for(int i=0;i<data.length;i++){
             temp[i]=data[i];
         }
           data=temp;
