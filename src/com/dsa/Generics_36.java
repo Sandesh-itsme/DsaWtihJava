@@ -1,5 +1,7 @@
 package com.dsa;
 
+import java.util.Arrays;
+
 public class Generics_36 {
     public static void main(String[] args) {
 
@@ -8,12 +10,19 @@ public class Generics_36 {
         c1.add(7);
         c1.add(8);
 
-        System.out.println("The size of array is : "+c1.getSize());
-        System.out.println("The value at index 0 is : "+c1.getValue(0));
-        System.out.println("The value at index 1 is : "+c1.getValue(1));
-        c1.setValue(1,8);
-        System.out.println("The value at index 1 after changing  is : "+c1.getValue(1));
-        System.out.println(c1.remove(2));
+        // Accessing elements  overriding toString() method.
+        System.out.println(c1);
+
+
+        // Accessing elements without overriding toString() method.
+//        System.out.println("The size of array is : "+c1.getSize());
+//        System.out.println("The value at index 0 is : "+c1.getValue(0));
+//        System.out.println("The value at index 1 is : "+c1.getValue(1));
+//        c1.setValue(1,8);
+//        System.out.println("The value at index 1 after changing  is : "+c1.getValue(1));
+//        System.out.println(c1.remove(2));
+
+
     }
 }
 
@@ -58,4 +67,12 @@ public class Generics_36 {
                 public void setValue(int index,int value){
         data[index]=value;
                 }
+
+      @Override
+      public String toString() {
+          return "CustomArrayList{" +
+                  "data=" + Arrays.toString(data) +
+                  ", size=" + size +
+                  '}';
+      }
   }
