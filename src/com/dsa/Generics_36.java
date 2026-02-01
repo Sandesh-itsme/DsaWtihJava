@@ -10,7 +10,7 @@ public class Generics_36 {
         c1.add(7);
         c1.add(8);
 
-        // Accessing elements  overriding toString() method.
+        // Accessing elements  using overriding toString() method.
         System.out.println(c1);
 
 
